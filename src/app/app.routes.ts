@@ -1,13 +1,17 @@
-import { Routes } from '@angular/router';
-import { OffersComponent } from './offers';
-// import { AboutComponent } from './about';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import { NoContentComponent } from './no-content';
-
-export const ROUTES: Routes = [
-  { path: '', component: OffersComponent },
-  // { path: 'home',  component: HomeComponent },
-  // { path: 'about', component: AboutComponent },
-  // { path: 'detail', loadChildren: './+detail#DetailModule'},
-  // { path: 'barrel', loadChildren: './+barrel#BarrelModule'},
- { path: '**',    component: NoContentComponent },
+const routes: Routes = [
+    {
+        path: '',
+        redirectTo: '/offers',
+        pathMatch: 'full'
+    },
+    // { path: '**', component: NoContentComponent },
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
