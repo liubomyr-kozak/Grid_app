@@ -20,7 +20,7 @@ export class OffersListComponent implements OnInit {
 
   public ngOnInit() {
     this.offers = this.route.snapshot.data['offers'];
-
+    debugger
     this.gridConfig = {
       data: this.offers
     }

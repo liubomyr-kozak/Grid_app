@@ -17,8 +17,6 @@ export class FakeBackendInterceptor implements HttpInterceptor {
     }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-
-
         return Observable.of(null).mergeMap(() => {
             if (request.url.endsWith('/api/offers') && request.method === 'GET') {
                 return Observable.of(new HttpResponse({ status: 200, body: require("./OffersData.json") }));
@@ -26,7 +24,6 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             return next.handle(request);
 
         })
-
             .materialize()
             .delay(500)
             .dematerialize();
