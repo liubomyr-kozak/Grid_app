@@ -13,4 +13,13 @@ export class GridComponent implements OnInit {
   ngOnInit() {
     
   }
+  
+  getData(source: {}, key: string) {
+    if (key.indexOf('.') != -1) {
+      return key.split('.').reduce((resource, prop) => {
+        return resource[prop];
+       }, source);
+    }
+    return source[key]
+  }
 }

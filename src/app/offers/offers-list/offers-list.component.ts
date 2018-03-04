@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
-  selector: 'offers-list', 
-  styleUrls: [ './offers-list.component.css' ],
+  selector: 'offers-list',
+  styleUrls: ['./offers-list.component.css'],
   templateUrl: './offers-list.component.html'
 })
 export class OffersListComponent implements OnInit {
@@ -12,18 +12,26 @@ export class OffersListComponent implements OnInit {
   @ViewChild('appGrid') gridElem: any;
 
   public gridConfig: any;
-  offers: any;
+  store: any;
   constructor(
     private route: ActivatedRoute
   ) {
   }
 
   public ngOnInit() {
-    this.offers = this.route.snapshot.data['offers'];
-    debugger
+    this.store = this.route.snapshot.data['offers'];
+
     this.gridConfig = {
-      data: this.offers
+      data: this.store.offers,
+      columnsConf: [
+        { type: 'text', propName: "product.content.text" },
+        { type: 'contractTerm', propName: "contractTerm" },
+        { type: 'cost', propName: "cost" },
+      ]
     }
+
+
+    debugger
   }
 
   public submitState(value: string) {

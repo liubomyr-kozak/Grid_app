@@ -1,9 +1,9 @@
 <div>
   <table>
-    <tr>
-      <td></td>
+    <tr *ngFor="let item of config.data">
+      <td *ngFor="let colmn of config.columnsConf">
+        <grid-dynamic-component [type]="colmn.type" [data]="getData(item, colmn.propName)"></grid-dynamic-component>
+      </td>
     </tr>
   </table>
 </div>
-
-<grid-dynamic-component type="cost"></grid-dynamic-component>
