@@ -24,14 +24,14 @@ export class OffersListComponent implements OnInit {
     this.gridConfig = {
       data: this.store.offers,
       columnsConf: [
-        { type: 'text', propName: "product.content.text" },
-        { type: 'contractTerm', propName: "contractTerm" },
-        { type: 'cost', propName: "cost" },
+        { type: 'text', propName: "product.content.text", width: 200},
+        { type: 'contractTerm', propName: "contractTerm", width: 200 },
+        { type: 'cost', propName: "cost.effectiveCost" },
       ]
     }
 
 
-    debugger
+    console.log(this.store.offers)
   }
 
   public submitState(value: string) {

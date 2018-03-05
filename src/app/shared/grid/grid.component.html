@@ -1,9 +1,10 @@
-<div>
-  <table>
-    <tr *ngFor="let item of config.data">
-      <td *ngFor="let colmn of config.columnsConf">
-        <grid-dynamic-component [type]="colmn.type" [data]="getData(item, colmn.propName)"></grid-dynamic-component>
-      </td>
-    </tr>
-  </table>
-</div>
+<table>
+  <tr *ngFor="let item of config.data">
+    <td width="10">
+      {{item.rank}}.
+    </td>
+    <td *ngFor="let colmn of config.columnsConf" [attr.width]="colmn.width">
+      <grid-dynamic-component [type]="colmn.type" [data]="getData(item, colmn.propName)"></grid-dynamic-component>
+    </td>
+  </tr>
+</table>

@@ -4,10 +4,12 @@ import { CostComponent } from './components/cost/cost.component';
 import { GridDynamicComponentComponent } from './grid-dynamic-component.component';
 import { TextComponent } from './components/text/text.component';
 import { ContractTermComponent } from './components/contract-term/contract-term.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    AngularFontAwesomeModule
   ],
   entryComponents: [CostComponent, TextComponent, ContractTermComponent],
   declarations: [CostComponent, GridDynamicComponentComponent, TextComponent, ContractTermComponent],

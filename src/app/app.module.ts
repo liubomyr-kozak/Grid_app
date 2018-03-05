@@ -7,6 +7,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -23,8 +25,8 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { NoContentComponent } from './no-content';
 
+
 import '../styles/styles.scss';
-import '../styles/headings.css';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -57,7 +59,8 @@ interface StoreType {
     HttpClientModule,
     AppRoutingModule,
     GridModule,
-    OffersModule
+    OffersModule,
+    AngularFontAwesomeModule
   ],
   providers: [
     environment.ENV_PROVIDERS,

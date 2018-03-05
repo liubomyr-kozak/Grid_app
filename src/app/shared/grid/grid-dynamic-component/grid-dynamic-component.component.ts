@@ -39,6 +39,6 @@ export class GridDynamicComponentComponent implements OnInit {
 
   getComponentType(typeName: string) {
     let type = this.componentsMapping[typeName];
-    return type || '';
+    return type || this.componentsMapping['text'];
   }
 }
