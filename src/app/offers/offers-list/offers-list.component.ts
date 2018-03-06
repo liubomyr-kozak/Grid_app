@@ -24,9 +24,9 @@ export class OffersListComponent implements OnInit {
     this.gridConfig = {
       data: this.store.offers,
       columnsConf: [
-        { type: 'text', propName: "product.content.text", width: 200},
-        { type: 'contractTerm', propName: "contractTerm", width: 200 },
-        { type: 'cost', propName: "cost.effectiveCost" },
+        { type: 'text', propName: "product.content.text", class: 'text'},
+        { type: 'contractTerm', propName: "contractTerm", class: 'contractTerm' },
+        { type: 'cost', propName: "cost.effectiveCost",  class: 'cost'},
       ]
     }
 

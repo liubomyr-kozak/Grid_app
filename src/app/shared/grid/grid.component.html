@@ -3,7 +3,7 @@
     <td width="10">
       {{item.rank}}.
     </td>
-    <td *ngFor="let colmn of config.columnsConf" [attr.width]="colmn.width">
+    <td *ngFor="let colmn of config.columnsConf" [ngClass]="colmn.class" [attr.width]="colmn.width">
       <grid-dynamic-component [type]="colmn.type" [data]="getData(item, colmn.propName)"></grid-dynamic-component>
     </td>
   </tr>

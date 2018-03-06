@@ -1,0 +1,63 @@
+:host{
+    display: block;
+    text-align: right;
+}
+
+.title{
+    margin-top:0; 
+}
+
+.more{
+    display: block;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    width: auto;
+    box-shadow: 0px 0px 0px 1px #000, 1px 2px 0px 1px #000;
+    cursor: pointer;
+}
+
+.more:hover{
+    box-shadow: 0px 0px 0px 1px #000, 1px 1px 0px 1px #000;
+}
+.more:active{
+    box-shadow: 0px 0px 0px 1px #000;
+}
+
+@media only screen and (max-width : 320px) {
+
+    :host{
+        position: relative;
+        padding-right: 35px;
+        min-height: 55px;
+    }
+
+    .more-btn-name{
+        display: none;
+    }
+
+    .more{
+        position: absolute;
+        top: 0;
+        right: 8px;
+        height: 100%;
+        width: 15px;
+    }
+
+    .more fa{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%,-49%);
+        transform: translate(-50%, -50%);
+    }
+    
+}
+@media only screen
+and (min-width: 321px){
+
+    :host{
+       
+    }
+}
