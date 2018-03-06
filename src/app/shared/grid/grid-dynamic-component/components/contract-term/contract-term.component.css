@@ -1,0 +1,32 @@
+
+    
+
+@media only screen and (max-width : 320px) {
+    .upload-speed-section{
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width : 321px) {
+    .upload-speed-section fa,
+    .download-speed-section fa{
+        display: inline-block;
+        border: 1px solid #000;
+        width: 29px;
+        text-align: center;
+        font-size: 10px;
+        height: 19px;
+        line-height: 19px;
+        vertical-align: middle;
+        margin: 0 11px 0 0;
+    }
+
+    .upload-speed-section,
+    .download-speed-section{
+        border: 1px solid #000;
+        border-radius: 0 25px 25px 0;
+        max-width: 146px;
+        margin: 0 0 10px;
+    }
+}

@@ -1,5 +1,12 @@
-<div>
+<div class="download-speed-section">
     <fa name="arrow-down"></fa>
     {{data.downloadSpeed.amount / 1000 | number : '1.0-2'}}
+    <span>Mbit/s</span>
+</div>
+
+
+<div class="upload-speed-section">
+    <fa name="arrow-up"></fa>
+    {{data.uploadSpeed.amount / 1000 | number : '1.0-2'}}
     <span>Mbit/s</span>
 </div>
