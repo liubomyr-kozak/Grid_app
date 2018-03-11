@@ -8,6 +8,7 @@ import { DynamicComponent } from '../DynamicComponent';
 export class TextComponent extends DynamicComponent implements OnInit {
   constructor() { 
     super();
+    
   }
 
   ngOnInit() {
